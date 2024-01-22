@@ -1,0 +1,35 @@
+{
+  "name": "metrics-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.ts",
+  "scripts": {
+    "prebuild": "rm -rf generated dist",
+    "build": "tsoa spec-and-routes && tsc -b",
+    "predev": "npm run build",
+    "dev": "concurrently \"nodemon -V -w src -w generated -e js,ts\" \"nodemon -w src -e js,ts -x tsoa spec-and-routes\"",
+    "prestart": "npm run build",
+    "start": "ts-node src/server.ts",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.14",
+    "@types/supertest": "^2.0.10",    
+    "express": "^4.17.1",
+    "influx": "^5.6.3",
+    "jest": "^26.5.3",
+    "node-cache": "^5.1.2",    
+    "supertest": "^5.0.0",
+    "ts-jest": "^26.4.1",
+    "ts-node": "^9.0.0",
+    "tsoa": "^3.2.1",
+    "typedi": "^0.8.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.10"
+  }
+}
