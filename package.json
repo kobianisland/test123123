@@ -22,7 +22,7 @@
     "influx": "^5.6.3",
     "jest": "^26.5.3",
     "node-cache": "^5.1.2",    
-    "supertest": "^5.0.0",
+    "supertest": "^6.2.0",
     "ts-jest": "^26.4.1",
     "ts-node": "^9.0.0",
     "tsoa": "^3.2.1",
